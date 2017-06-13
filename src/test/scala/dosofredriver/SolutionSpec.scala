@@ -23,7 +23,7 @@ class SolutionSpec extends Matchers with WordSpecLike {
         Repr(7, Timestamp(15, 9, 2016))
       )
 
-      solve(listFromEmail) equals pastInserted
+      solve(listFromEmail) should contain theSameElementsAs pastInserted
     }
 
     "return empty list on empty argument list" in {
